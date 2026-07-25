@@ -1,0 +1,287 @@
+/* =======================================
+   GOOGLE FONTS
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap');
+
+
+/* =======================================
+   PAGE
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#7b5d4d;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px;
+
+    font-family:"Patrick Hand",cursive;
+}
+
+
+/* =======================================
+   PAPER
+======================================= */
+
+.paper{
+
+    position:relative;
+
+    width:min(900px,95vw);
+
+    padding:95px 90px;
+
+    background:url("assets/assetspaper.jpg") center/100% 100% no-repeat;
+
+    transform:rotate(-0.8deg);
+
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.35));
+
+}
+
+
+/* =======================================
+   BACKGROUND FLOWER (Flower 2)
+======================================= */
+
+.paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("assets/assetsflower2.jpg") center center no-repeat;
+
+    background-size:125%;
+
+    opacity:.08;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+
+/* =======================================
+   FLOWERS
+======================================= */
+
+.flower{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    z-index:3;
+
+}
+
+.flower1{
+
+    width:180px;
+
+    top:-40px;
+    left:-35px;
+
+    transform:rotate(-15deg);
+
+}
+
+.flower3{
+
+    width:190px;
+
+    top:-30px;
+    right:-40px;
+
+    transform:rotate(18deg);
+
+}
+
+.flower4{
+
+    width:170px;
+
+    bottom:-35px;
+    left:-30px;
+
+    transform:rotate(12deg);
+
+}
+
+.flower5{
+
+    width:165px;
+
+    bottom:-30px;
+    right:-30px;
+
+    transform:rotate(-10deg);
+
+}
+
+
+/* =======================================
+   LETTER CONTENT
+======================================= */
+
+.content{
+
+    position:relative;
+    z-index:5;
+
+}
+
+
+/* =======================================
+   HEADING
+======================================= */
+
+h1{
+
+    font-family:"Indie Flower",cursive;
+
+    font-size:58px;
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    color:#4b2c22;
+
+}
+
+
+/* =======================================
+   TEXT
+======================================= */
+
+p{
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#4e382d;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =======================================
+   SIGNATURE
+======================================= */
+
+.signature{
+
+    margin-top:65px;
+
+    text-align:right;
+
+    font-size:38px;
+
+    font-family:"Indie Flower",cursive;
+
+    color:#593428;
+
+}
+
+
+/* =======================================
+   BUTTON ROW
+======================================= */
+
+.button-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:60px;
+
+}
+
+
+/* =======================================
+   BUTTONS
+======================================= */
+
+.back,
+.open-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    min-width:230px;
+
+    padding:15px 30px;
+
+    text-decoration:none;
+
+    font-family:"Plus Jakarta Sans",sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#f8f3ed;
+
+    background:linear-gradient(to bottom,#6b4b40,#57392f);
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+
+.back:hover,
+.open-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(to bottom,#7b594d,#654338);
+
+    box-shadow:0 14px 28px rgba(0,0,0,.25);
+
+}
+
+
+.back:active,
+.open-btn:active{
+
+    transform:translateY(-1px);
+
+}
