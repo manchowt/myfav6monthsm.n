@@ -954,6 +954,40 @@ body.dark{
 
 }
 
+.popup-card{
+
+    background:white;
+
+    color:#222;
+
+}
+
+body.dark .popup-card{
+
+    background:#1f1f1f;
+
+    color:white;
+
+}
+
+body.dark .popup-card h2{
+
+    color:white;
+
+}
+
+body.dark .popup-card p{
+
+    color:#ddd;
+
+}
+
+body.dark .popup-card div:last-child{
+
+    color:#999;
+
+}
+
 
 /* ==========================================================
    NAVBAR
