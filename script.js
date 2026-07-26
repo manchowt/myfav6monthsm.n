@@ -278,15 +278,13 @@ overlay.appendChild(popup);
 // ======================================================
 // IMAGE
 // ======================================================
+const imageTitle = document.createElement("h2");
 
-const popupImage = document.createElement("img");
+imageTitle.innerHTML = "❤️ my favourite person😁😝😽";
 
-popupImage.style.width = "60%";
-popupImage.style.height = "100%";
+imageTitle.style.marginBottom = "18px";
 
-popupImage.style.objectFit = "cover";
-
-popup.appendChild(popupImage);
+rightPanel.appendChild(imageTitle);
 
 
 
