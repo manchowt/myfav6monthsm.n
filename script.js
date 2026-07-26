@@ -230,7 +230,7 @@ popup.style.width = "950px";
 popup.style.maxWidth = "92vw";
 popup.style.height = "88vh";
 
-popup.style.background = "white";
+popup.classList.add("popup-card");
 popup.style.borderRadius = "24px";
 
 popup.style.display = "flex";
