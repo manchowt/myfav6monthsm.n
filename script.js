@@ -22,6 +22,40 @@ const messageButton = document.getElementById("messageButton");
 
 const searchBox = document.getElementById("searchBox");
 
+// ======================================
+// CUSTOM POPUP
+// ======================================
+
+const popupOverlay = document.getElementById("popupOverlay");
+const popupTitle = document.getElementById("popupTitle");
+const popupMessage = document.getElementById("popupMessage");
+const popupClose = document.getElementById("popupClose");
+
+function showPopup(title, message){
+
+    popupTitle.innerHTML = title;
+
+    popupMessage.innerHTML = message;
+
+    popupOverlay.classList.remove("hidden");
+
+}
+
+popupClose.addEventListener("click", function(){
+
+    popupOverlay.classList.add("hidden");
+
+});
+
+popupOverlay.addEventListener("click", function(e){
+
+    if(e.target === popupOverlay){
+
+        popupOverlay.classList.add("hidden");
+
+    }
+
+});
 
 
 // ======================================================
@@ -357,7 +391,10 @@ document.querySelectorAll(".pin img").forEach(function(image){
 
             popupImage.style.objectFit = "contain";
 
-            popupImage.style.background = "#f6f6f6";
+            popupImage.style.background =
+document.body.classList.contains("dark")
+? "#111"
+: "#f6f6f6";
 
             popupImage.style.padding = "20px";
 
@@ -424,7 +461,7 @@ document.addEventListener("keydown",function(e){
 
 notificationButton.addEventListener("click", function () {
 
-    alert(
+    showPopup(
 `❤️ 1 New Notification
 
 its been six monthsss.
@@ -441,7 +478,7 @@ its been longer`
 
 messageButton.addEventListener("click", function () {
 
-    alert(
+   showPopup(
 `💬 From jaanu
 
 thank you for the happiest six months of my life.
