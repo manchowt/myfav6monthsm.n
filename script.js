@@ -228,8 +228,6 @@ searchBox.addEventListener("keydown", function (e) {
 // PART 2 - PINTEREST IMAGE POPUP
 // ======================================================
 
-
-
 // ======================================================
 // CREATE OVERLAY
 // ======================================================
@@ -243,7 +241,6 @@ overlay.style.width = "100vw";
 overlay.style.height = "100vh";
 
 overlay.style.display = "none";
-
 overlay.style.justifyContent = "center";
 overlay.style.alignItems = "center";
 
@@ -251,7 +248,6 @@ overlay.style.background = "rgba(0,0,0,.88)";
 overlay.style.zIndex = "99999";
 
 document.body.appendChild(overlay);
-
 
 
 // ======================================================
@@ -265,27 +261,25 @@ popup.style.maxWidth = "92vw";
 popup.style.height = "88vh";
 
 popup.classList.add("popup-card");
+
 popup.style.borderRadius = "24px";
-
 popup.style.display = "flex";
-
 popup.style.overflow = "hidden";
 
 overlay.appendChild(popup);
 
 
-
 // ======================================================
 // IMAGE
 // ======================================================
-const imageTitle = document.createElement("h2");
 
-imageTitle.innerHTML = "❤️ my favourite person😁😝😽";
+const popupImage = document.createElement("img");
 
-imageTitle.style.marginBottom = "18px";
+popupImage.style.width = "60%";
+popupImage.style.height = "100%";
+popupImage.style.objectFit = "cover";
 
-rightPanel.appendChild(imageTitle);
-
+popup.appendChild(popupImage);
 
 
 // ======================================================
@@ -295,7 +289,6 @@ rightPanel.appendChild(imageTitle);
 const rightPanel = document.createElement("div");
 
 rightPanel.style.width = "40%";
-
 rightPanel.style.padding = "35px";
 
 rightPanel.style.display = "flex";
@@ -304,19 +297,18 @@ rightPanel.style.flexDirection = "column";
 popup.appendChild(rightPanel);
 
 
-
 // ======================================================
 // TITLE
 // ======================================================
 
-const popupTitle = document.createElement("h2");
+const imagePopupTitle = document.createElement("h2");
 
-popupTitle.innerHTML = "❤️ my favourite person😁😝😽";
+imagePopupTitle.innerHTML =
+"❤️ my favourite person😁😝😽";
 
-popupTitle.style.marginBottom = "18px";
+imagePopupTitle.style.marginBottom = "18px";
 
-rightPanel.appendChild(popupTitle);
-
+rightPanel.appendChild(imagePopupTitle);
 
 
 // ======================================================
@@ -335,7 +327,6 @@ popupCaption.style.flex = "1";
 rightPanel.appendChild(popupCaption);
 
 
-
 // ======================================================
 // FOOTER
 // ======================================================
@@ -351,38 +342,26 @@ popupFooter.style.marginTop = "25px";
 rightPanel.appendChild(popupFooter);
 
 
-
 // ======================================================
 // OPEN IMAGE
 // ======================================================
 
 document.querySelectorAll(".pin img").forEach(function(image){
 
-    image.addEventListener("click",function(){
+    image.addEventListener("click", function(){
 
         popupImage.src = image.src;
 
         popupCaption.innerHTML =
-            image.dataset.caption || "";
-
-
-
-        // ==================================
-        // SCREENSHOTS
-        // ==================================
+        image.dataset.caption || "";
 
         if(
 
             image.src.includes("ilu") ||
-
             image.src.includes("lugn") ||
-
             image.src.includes("bemyg") ||
-
             image.src.includes("platonic") ||
-
             image.src.includes("1stpic2gether") ||
-
             image.src.includes("hypedbemyg")
 
         ){
@@ -390,19 +369,13 @@ document.querySelectorAll(".pin img").forEach(function(image){
             popupImage.style.objectFit = "contain";
 
             popupImage.style.background =
-document.body.classList.contains("dark")
-? "#111"
-: "#f6f6f6";
+            document.body.classList.contains("dark")
+            ? "#111"
+            : "#f6f6f6";
 
             popupImage.style.padding = "20px";
 
         }
-
-
-
-        // ==================================
-        // EVERYTHING ELSE
-        // ==================================
 
         else{
 
@@ -421,32 +394,30 @@ document.body.classList.contains("dark")
 });
 
 
-
 // ======================================================
 // CLOSE POPUP
 // ======================================================
 
-overlay.addEventListener("click",function(e){
+overlay.addEventListener("click", function(e){
 
-    if(e.target===overlay){
+    if(e.target === overlay){
 
-        overlay.style.display="none";
+        overlay.style.display = "none";
+
+    }
+
+});
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        overlay.style.display = "none";
 
     }
 
 });
 
-
-
-document.addEventListener("keydown",function(e){
-
-    if(e.key==="Escape"){
-
-        overlay.style.display="none";
-
-    }
-
-});
 // ======================================================
 // PART 3 - BUTTONS & FINAL FEATURES
 // ======================================================
