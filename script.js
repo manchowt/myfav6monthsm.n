@@ -21,6 +21,15 @@ document.getElementById("searchBox");
 const darkModeButton =
 document.getElementById("darkModeButton");
 
+console.log(homepage);
+console.log(boardPage);
+console.log(boardLink);
+console.log(homeButton);
+console.log(exploreButton);
+console.log(notificationButton);
+console.log(messageButton);
+console.log(searchBox);
+console.log(darkModeButton);
 
 
 // ======================================================
