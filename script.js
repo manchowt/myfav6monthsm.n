@@ -22,40 +22,7 @@ const messageButton = document.getElementById("messageButton");
 
 const searchBox = document.getElementById("searchBox");
 
-// ======================================
-// CUSTOM POPUP
-// ======================================
 
-const popupOverlay = document.getElementById("popupOverlay");
-const popupTitle = document.getElementById("popupTitle");
-const popupMessage = document.getElementById("popupMessage");
-const popupClose = document.getElementById("popupClose");
-
-function showPopup(title, message){
-
-    popupTitle.innerHTML = title;
-
-    popupMessage.innerHTML = message;
-
-    popupOverlay.classList.remove("hidden");
-
-}
-
-popupClose.addEventListener("click", function(){
-
-    popupOverlay.classList.add("hidden");
-
-});
-
-popupOverlay.addEventListener("click", function(e){
-
-    if(e.target === popupOverlay){
-
-        popupOverlay.classList.add("hidden");
-
-    }
-
-});
 
 
 // ======================================================
