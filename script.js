@@ -230,7 +230,9 @@ popup.style.width = "950px";
 popup.style.maxWidth = "92vw";
 popup.style.height = "88vh";
 
-popup.style.background = "white";
+popup.style.background = document.body.classList.contains("dark")
+    ? "#262626"
+    : "white";
 popup.style.borderRadius = "24px";
 
 popup.style.display = "flex";
@@ -357,7 +359,10 @@ document.querySelectorAll(".pin img").forEach(function(image){
 
             popupImage.style.objectFit = "contain";
 
-            popupImage.style.background = "#f6f6f6";
+           popupImage.style.background =
+document.body.classList.contains("dark")
+? "#1a1a1a"
+: "#f6f6f6";
 
             popupImage.style.padding = "20px";
 
@@ -378,7 +383,27 @@ document.querySelectorAll(".pin img").forEach(function(image){
             popupImage.style.padding = "0";
 
         }
+if(document.body.classList.contains("dark")){
 
+    popup.style.background = "#262626";
+
+    popupTitle.style.color = "white";
+
+    popupCaption.style.color = "#ddd";
+
+    popupFooter.style.color = "#aaa";
+
+}else{
+
+    popup.style.background = "white";
+
+    popupTitle.style.color = "#111";
+
+    popupCaption.style.color = "#444";
+
+    popupFooter.style.color = "#777";
+
+}
         overlay.style.display = "flex";
 
     });
