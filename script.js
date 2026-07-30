@@ -357,7 +357,10 @@ document.querySelectorAll(".pin img").forEach(function(image){
 
             popupImage.style.objectFit = "contain";
 
-            popupImage.style.background = "#f6f6f6";
+            popupImage.style.background =
+document.body.classList.contains("dark")
+    ? "#252525"
+    : "#f6f6f6";
 
             popupImage.style.padding = "20px";
 
@@ -369,17 +372,45 @@ document.querySelectorAll(".pin img").forEach(function(image){
         // EVERYTHING ELSE
         // ==================================
 
-        else{
+    else{
 
-            popupImage.style.objectFit = "cover";
+    popupImage.style.objectFit = "cover";
 
-            popupImage.style.background = "transparent";
+    popupImage.style.background = "transparent";
 
-            popupImage.style.padding = "0";
+    popupImage.style.padding = "0";
 
-        }
+}
 
-        overlay.style.display = "flex";
+
+// ==================================
+// DARK MODE POPUP COLORS
+// ==================================
+
+if(document.body.classList.contains("dark")){
+
+    // same color as your note cards
+    popup.style.background = "#252525";
+
+    popupTitle.style.color = "#ffffff";
+
+    popupCaption.style.color = "#dddddd";
+
+    popupFooter.style.color = "#aaaaaa";
+
+}else{
+
+    popup.style.background = "#ffffff";
+
+    popupTitle.style.color = "#111111";
+
+    popupCaption.style.color = "#444444";
+
+    popupFooter.style.color = "#777777";
+
+}
+
+overlay.style.display = "flex";
 
     });
 
