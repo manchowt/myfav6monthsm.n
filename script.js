@@ -625,5 +625,5 @@ updatePopupTheme();
 
 darkModeButton.addEventListener("click", updatePopupTheme);
 
-});
+};
 
