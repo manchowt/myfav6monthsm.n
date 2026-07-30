@@ -22,7 +22,6 @@ const messageButton = document.getElementById("messageButton");
 
 const searchBox = document.getElementById("searchBox");
 
-const darkModeButton = document.getElementById("darkModeButton");
 
 
 
@@ -626,4 +625,4 @@ updatePopupTheme();
 darkModeButton.addEventListener("click", updatePopupTheme);
 
 });
-document.body.classList.add("dark");
+
