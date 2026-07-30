@@ -569,6 +569,15 @@ console.log(
 // ======================================================
 // DARK MODE
 // ======================================================
+darkModeButton.addEventListener("click", function(){
+
+    console.log("Dark mode clicked");
+
+    document.body.classList.toggle("dark");
+
+    console.log(document.body.className);
+
+});
 
 const darkModeButton = document.getElementById("darkModeButton");
 
