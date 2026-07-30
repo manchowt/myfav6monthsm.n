@@ -20,17 +20,12 @@ html{
 }
 
 body{
-
     font-family:"Plus Jakarta Sans",sans-serif;
-
     background:#ffffff;
-
     color:#111111;
-
     transition:
     background .35s ease,
     color .35s ease;
-
 }
 
 
@@ -39,11 +34,8 @@ body{
 ========================================================== */
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
 
 
@@ -52,11 +44,8 @@ a{
 ========================================================== */
 
 .navbar{
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
 
     height:80px;
@@ -64,9 +53,7 @@ a{
     padding:0 28px;
 
     display:flex;
-
     align-items:center;
-
     gap:18px;
 
     background:#ffffff;
@@ -76,7 +63,6 @@ a{
     transition:
     background .35s,
     border-color .35s;
-
 }
 
 
@@ -85,41 +71,29 @@ a{
 ========================================================== */
 
 .logo{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
 
     font-weight:700;
-
     font-size:20px;
-
 }
 
 .logo-circle{
-
     width:42px;
-
     height:42px;
 
     border-radius:50%;
 
     background:#e60023;
-
     color:white;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     font-size:22px;
-
     font-weight:700;
-
 }
 
 
@@ -128,19 +102,13 @@ a{
 ========================================================== */
 
 .nav-links{
-
     display:flex;
-
     align-items:center;
-
     gap:10px;
-
 }
 
 .nav-links button{
-
     border:none;
-
     background:none;
 
     border-radius:999px;
@@ -148,29 +116,21 @@ a{
     padding:12px 18px;
 
     font-family:"Plus Jakarta Sans",sans-serif;
-
     font-size:15px;
-
     font-weight:600;
 
     cursor:pointer;
 
     transition:.25s;
-
 }
 
 .nav-links button:hover{
-
     background:#efefef;
-
 }
 
 .nav-links .active{
-
     background:#111111;
-
     color:white;
-
 }
 
 
@@ -179,19 +139,14 @@ a{
 ========================================================== */
 
 .search-area{
-
     flex:1;
-
 }
 
 .search-area input{
-
     width:100%;
-
     height:48px;
 
     border:none;
-
     outline:none;
 
     border-radius:999px;
@@ -201,19 +156,15 @@ a{
     padding:0 22px;
 
     font-size:15px;
-
     font-family:"Plus Jakarta Sans",sans-serif;
 
     transition:
     background .25s,
     color .25s;
-
 }
 
 .search-area input::placeholder{
-
     color:#7a7a7a;
-
 }
 
 
@@ -222,27 +173,19 @@ a{
 ========================================================== */
 
 .icons{
-
     display:flex;
-
     align-items:center;
-
     gap:18px;
-
 }
 
 .icons span{
-
     width:40px;
-
     height:40px;
 
     border-radius:50%;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     cursor:pointer;
@@ -250,20 +193,14 @@ a{
     font-size:19px;
 
     transition:.25s;
-
 }
 
 .icons span:hover{
-
     background:#efefef;
-
 }
 
-
 .profile{
-
     width:42px;
-
     height:42px;
 
     border-radius:50%;
@@ -271,9 +208,7 @@ a{
     background:#efefef;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     cursor:pointer;
@@ -281,13 +216,10 @@ a{
     transition:.25s;
 
     font-size:18px;
-
 }
 
 .profile:hover{
-
     background:#dddddd;
-
 }
 
 
@@ -296,23 +228,16 @@ a{
 ========================================================== */
 
 .homepage{
-
     max-width:1450px;
-
     margin:auto;
 
     padding:45px;
-
 }
 
 .homepage h2{
-
     font-size:30px;
-
     margin-bottom:35px;
-
     font-weight:700;
-
 }
 
 
@@ -321,33 +246,22 @@ a{
 ========================================================== */
 
 .boards{
-
     display:flex;
-
     gap:35px;
-
     flex-wrap:wrap;
-
 }
 
 .board-card{
-
     width:340px;
-
     transition:.28s;
-
 }
 
 .board-card:hover{
-
     transform:translateY(-6px);
-
 }
 
 .board-card img{
-
     width:100%;
-
     height:260px;
 
     object-fit:cover;
@@ -355,48 +269,36 @@ a{
     border-radius:24px;
 
     display:block;
-
 }
 
 .board-info{
-
     margin-top:16px;
-
 }
 
 .board-info h3{
-
     font-size:22px;
-
     margin-bottom:6px;
-
 }
 
 .board-info p{
-
     color:#6e6e6e;
-
     font-size:15px;
-
 }
+
+
 /* ==========================================================
    BOARD PAGE
 ========================================================== */
 
 .hidden{
-
     display:none;
-
 }
 
 .board-page{
-
     max-width:1450px;
-
     margin:auto;
 
     padding:40px;
-
 }
 
 
@@ -405,23 +307,17 @@ a{
 ========================================================== */
 
 .board-header{
-
     display:flex;
-
     flex-direction:column;
 
     align-items:center;
-
     text-align:center;
 
     margin-bottom:45px;
-
 }
 
 .board-avatar{
-
     width:120px;
-
     height:120px;
 
     border-radius:50%;
@@ -431,54 +327,33 @@ a{
     margin-bottom:18px;
 
     box-shadow:0 8px 25px rgba(0,0,0,.12);
-
 }
 
 .board-header h1{
-
     font-size:34px;
-
     font-weight:700;
 
     margin-bottom:10px;
-
 }
 
 .board-header p{
-
     font-size:16px;
-
     color:#777777;
-
 }
 
 
 /* ==========================================================
-   PINTEREST MASONRY GRID
+   PINTEREST GRID
 ========================================================== */
 
 .pins{
-
     column-count:5;
-
     column-gap:18px;
-
 }
 
 .pin{
-
     break-inside:avoid;
-
     margin-bottom:18px;
-
-}
-
-
-/* ==========================================================
-   PIN CARD
-========================================================== */
-
-.pin{
 
     background:#ffffff;
 
@@ -494,15 +369,11 @@ a{
     transform .25s,
     box-shadow .25s,
     background .35s;
-
 }
 
 .pin:hover{
-
     transform:translateY(-5px);
-
     box-shadow:0 14px 28px rgba(0,0,0,.15);
-
 }
 
 
@@ -511,68 +382,34 @@ a{
 ========================================================== */
 
 .pin img{
-
     width:100%;
-
     display:block;
-
 }
-
-
-/* Regular photos */
 
 .pin.photo img{
-
     object-fit:cover;
-
 }
-
-
-/* Screenshots */
 
 .pin.screenshot img{
-
     object-fit:contain;
-
     background:#f4f4f4;
-
     padding:10px;
-
 }
-
-
-/* Drawings */
 
 .pin.drawing img{
-
     object-fit:contain;
-
     background:#faf7f2;
-
     padding:16px;
-
 }
-
-
-/* Taller pins */
 
 .pin.tall img{
-
     min-height:430px;
-
     object-fit:cover;
-
 }
 
-
-/* Extra tall screenshots */
-
 .pin.screenshot.tall img{
-
     min-height:520px;
-
     object-fit:contain;
-
 }
 
 
@@ -581,37 +418,34 @@ a{
 ========================================================== */
 
 .pin.note{
-
     background:#fffdf7;
-
     padding:28px;
 
-    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 
+    min-height:220px;
 }
 
 .pin.note h3{
-
     font-family:"Bodoni Moda",serif;
-
     font-size:23px;
 
     margin-bottom:16px;
 
     color:#222222;
-
 }
 
 .pin.note p{
-
     font-family:"Bodoni Moda",serif;
-
     font-size:16px;
 
     line-height:1.8;
 
     color:#5d5d5d;
 
+    margin-top:12px;
 }
 
 
@@ -620,44 +454,27 @@ a{
 ========================================================== */
 
 .pin img{
-
     transition:
     transform .35s ease,
     filter .35s ease;
-
 }
 
 .pin:hover img{
-
     transform:scale(1.025);
-
 }
 
-
-/* Don't zoom screenshots */
-
-.pin.screenshot:hover img{
-
-    transform:none;
-
-}
-
-
-/* Don't zoom drawings */
-
+.pin.screenshot:hover img,
 .pin.drawing:hover img{
-
     transform:none;
 
-}/* ==========================================================
+
+   /* ==========================================================
    POPUP OVERLAY
 ========================================================== */
 
 #imageOverlay,
 .overlay{
-
     position:fixed;
-
     inset:0;
 
     background:rgba(0,0,0,.88);
@@ -665,13 +482,11 @@ a{
     display:none;
 
     justify-content:center;
-
     align-items:center;
 
     z-index:9999;
 
     backdrop-filter:blur(6px);
-
 }
 
 
@@ -681,7 +496,6 @@ a{
 
 .popup-card,
 .card{
-
     width:min(1000px,92vw);
 
     max-height:90vh;
@@ -695,7 +509,6 @@ a{
     display:flex;
 
     box-shadow:0 25px 60px rgba(0,0,0,.35);
-
 }
 
 
@@ -705,7 +518,6 @@ a{
 
 .popup-card img,
 .card img{
-
     width:60%;
 
     max-height:90vh;
@@ -713,7 +525,6 @@ a{
     object-fit:cover;
 
     background:#f5f5f5;
-
 }
 
 
@@ -723,823 +534,46 @@ a{
 
 .popup-info,
 .right{
-
     width:40%;
 
     padding:34px;
 
     display:flex;
-
     flex-direction:column;
-
 }
 
 .popup-info h2,
 .right h2{
-
     font-size:28px;
 
     margin-bottom:22px;
-
 }
 
 .popup-info p,
 .right p{
-
     font-size:18px;
 
     line-height:1.8;
 
-    color:#555555;
+    color:#555;
 
     flex:1;
-
 }
 
 .popup-info small,
 .right div{
-
     color:#8b8b8b;
 
     font-size:14px;
-
 }
 
 
 /* ==========================================================
-   SCROLLBAR
-========================================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f5f5f5;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#cfcfcf;
-
-    border-radius:999px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#aaaaaa;
-
-}
-
-
-/* ==========================================================
-   TEXT SELECTION
-========================================================== */
-
-::selection{
-
-    background:#e60023;
-
-    color:#ffffff;
-
-}
-
-
-/* ==========================================================
-   SMOOTH TRANSITIONS
-========================================================== */
-
-body,
-.navbar,
-.board-card,
-.pin,
-.pin.note,
-.search-area input,
-.icons span,
-.profile,
-.board-header,
-.board-info,
-.popup-card,
-.card{
-
-    transition:
-    background .35s ease,
-    color .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease,
-    transform .25s ease;
-
-}
-
-
-/* ==========================================================
-   FADE-IN ANIMATION
-========================================================== */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(25px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-.board-page{
-
-    animation:fadeUp .45s ease;
-
-}
-
-.homepage{
-
-    animation:fadeUp .45s ease;
-
-}
-
-
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
-
-@media (max-width:1400px){
-
-    .pins{
-
-        column-count:4;
-
-    }
-
-}
-
-@media (max-width:1100px){
-
-    .pins{
-
-        column-count:3;
-
-    }
-
-}
-
-@media (max-width:850px){
-
-    .pins{
-
-        column-count:2;
-
-    }
-
-}
-
-@media (max-width:600px){
-
-    .pins{
-
-        column-count:1;
-
-    }
-
-    .popup-card,
-    .card{
-
-        flex-direction:column;
-
-        width:95vw;
-
-    }
-
-    .popup-card img,
-    .card img{
-
-        width:100%;
-
-        max-height:55vh;
-
-    }
-
-    .popup-info,
-    .right{
-
-        width:100%;
-
-    }
-
-}
-/* ==========================================================
-   DARK MODE
-========================================================== */
-
-body.dark{
-
-    background:#111111;
-
-    color:#f5f5f5;
-
-}
-
-.popup-card{
-
-    background:white;
-
-    color:#222;
-
-}
-
-body.dark .popup-card{
-
-    background:#1f1f1f;
-
-    color:white;
-
-}
-
-body.dark .popup-card h2{
-
-    color:white;
-
-}
-
-body.dark .popup-card p{
-
-    color:#ddd;
-
-}
-
-body.dark .popup-card div:last-child{
-
-    color:#999;
-
-}
-
-
-/* ==========================================================
-   NAVBAR
-========================================================== */
-
-body.dark .navbar{
-
-    background:#111111;
-
-    border-bottom:1px solid #2b2b2b;
-
-}
-
-
-/* ==========================================================
-   LOGO
-========================================================== */
-
-body.dark .logo{
-
-    color:#ffffff;
-
-}
-
-body.dark .logo-circle{
-
-    background:#e60023;
-
-}
-
-
-/* ==========================================================
-   NAVIGATION BUTTONS
-========================================================== */
-
-body.dark .nav-links button{
-
-    color:#ffffff;
-
-}
-
-body.dark .nav-links button:hover{
-
-    background:#2a2a2a;
-
-}
-
-body.dark .nav-links .active{
-
-    background:#ffffff;
-
-    color:#111111;
-
-}
-
-
-/* ==========================================================
-   SEARCH BAR
-========================================================== */
-
-body.dark .search-area input{
-
-    background:#2a2a2a;
-
-    color:#ffffff;
-
-}
-
-body.dark .search-area input::placeholder{
-
-    color:#aaaaaa;
-
-}
-
-
-/* ==========================================================
-   ICONS
-========================================================== */
-
-body.dark .icons span{
-
-    color:#ffffff;
-
-}
-
-body.dark .icons span:hover{
-
-    background:#2a2a2a;
-
-}
-
-body.dark .profile{
-
-    background:#2a2a2a;
-
-    color:#ffffff;
-
-}
-
-body.dark .profile:hover{
-
-    background:#3a3a3a;
-
-}
-
-
-/* ==========================================================
-   HOMEPAGE
-========================================================== */
-
-body.dark .homepage{
-
-    background:#111111;
-
-}
-
-body.dark .homepage h2{
-
-    color:#ffffff;
-
-}
-
-body.dark .board-info h3{
-
-    color:#ffffff;
-
-}
-
-body.dark .board-info p{
-
-    color:#bdbdbd;
-
-}
-
-
-/* ==========================================================
-   BOARD HEADER
-========================================================== */
-
-body.dark .board-header h1{
-
-    color:#ffffff;
-
-}
-
-body.dark .board-header p{
-
-    color:#bdbdbd;
-
-}
-
-
-/* ==========================================================
-   PINS
-========================================================== */
-
-body.dark .pin{
-
-    background:#1f1f1f;
-
-    box-shadow:none;
-
-}
-
-body.dark .pin:hover{
-
-    box-shadow:0 16px 35px rgba(0,0,0,.45);
-
-}
-
-
-/* ==========================================================
-   NOTE PINS
-========================================================== */
-
-body.dark .pin.note{
-
-    background:#252525;
-
-}
-
-body.dark .pin.note h3{
-
-    color:#ffffff;
-
-}
-
-body.dark .pin.note p{
-
-    color:#dddddd;
-
-}
-
-
-/* ==========================================================
-   SCREENSHOTS
-========================================================== */
-
-body.dark .pin.screenshot img{
-
-    background:#202020;
-
-}
-
-
-/* ==========================================================
-   DRAWING
-========================================================== */
-
-body.dark .pin.drawing img{
-
-    background:#202020;
-
-}
-
-
-/* ==========================================================
-   POPUP
-========================================================== */
-
-body.dark .popup-card,
-body.dark .card{
-
-    background:#1f1f1f;
-
-}
-
-body.dark .popup-card img,
-body.dark .card img{
-
-    background:#181818;
-
-}
-
-body.dark .popup-info h2,
-body.dark .right h2{
-
-    color:#ffffff;
-
-}
-
-body.dark .popup-info p,
-body.dark .right p{
-
-    color:#dddddd;
-
-}
-
-body.dark .popup-info small,
-body.dark .right div{
-
-    color:#aaaaaa;
-
-}
-
-
-/* ==========================================================
-   SCROLLBAR
-========================================================== */
-
-body.dark ::-webkit-scrollbar-track{
-
-    background:#111111;
-
-}
-
-body.dark ::-webkit-scrollbar-thumb{
-
-    background:#444444;
-
-}
-
-body.dark ::-webkit-scrollbar-thumb:hover{
-
-    background:#666666;
-
-}
-
-
-/* ==========================================================
-   IMAGE BRIGHTNESS
-========================================================== */
-
-body.dark .pin img{
-
-    filter:brightness(.96);
-
-}
-
-body.dark .pin:hover img{
-
-    filter:brightness(1);
-
-}
-
-
-/* ==========================================================
-   TRANSITION
-========================================================== */
-
-body,
-.navbar,
-.pin,
-.pin.note,
-.board-header,
-.board-info,
-.search-area input,
-.icons span,
-.profile,
-.popup-card,
-.card{
-
-    transition:
-        background .35s ease,
-        color .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease,
-        filter .35s ease;
-
-}
-/* ==========================================================
-   FINAL POLISH
-========================================================== */
-
-/* Slightly rounded images */
-
-.pin img{
-
-    border-radius:20px;
-
-}
-
-
-/* Better board hover */
-
-.board-card img{
-
-    transition:
-        transform .35s ease,
-        filter .35s ease;
-
-}
-
-.board-card:hover img{
-
-    transform:scale(1.02);
-
-}
-
-
-/* Better spacing between notes */
-
-.pin.note{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    min-height:220px;
-
-}
-
-
-/* Better paragraph spacing */
-
-.pin.note p{
-
-    margin-top:12px;
-
-}
-
-
-/* Images load nicely */
-
-.pin img{
-
-    opacity:0;
-
-    animation:fadeImage .5s forwards;
-
-}
-
-@keyframes fadeImage{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
-
-}
-
-
-/* Popup image */
-
-.card img{
-
-    transition:transform .35s ease;
-
-}
-
-.card img:hover{
-
-    transform:scale(1.01);
-
-}
-
-
-/* Search highlight */
-
-.pin.searchMatch{
-
-    outline:4px solid #e60023;
-
-    outline-offset:4px;
-
-}
-
-
-/* Better buttons */
-
-.nav-links button,
-.profile,
-.icons span{
-
-    user-select:none;
-
-}
-
-
-/* Disable image dragging */
-
-img{
-
-    user-select:none;
-
-    -webkit-user-drag:none;
-
-}
-
-
-/* Better popup text */
-
-.right{
-
-    overflow-y:auto;
-
-}
-
-.right::-webkit-scrollbar{
-
-    width:8px;
-
-}
-
-
-/* Footer spacing */
-
-footer{
-
-    margin-top:60px;
-
-    text-align:center;
-
-    color:#888;
-
-    font-size:14px;
-
-}
-
-
-/* ==========================================================
-   DESKTOP ONLY
-========================================================== */
-
-@media (min-width:1200px){
-
-    .homepage{
-
-        padding-left:60px;
-
-        padding-right:60px;
-
-    }
-
-    .board-page{
-
-        padding-left:60px;
-
-        padding-right:60px;
-
-    }
-
-}
-
-
-/* ==========================================================
-   LARGE SCREENS
-========================================================== */
-
-@media (min-width:1700px){
-
-    .pins{
-
-        column-count:6;
-
-    }
-
-}
-
-
-/* ==========================================================
-   SMALL LAPTOPS
-========================================================== */
-
-@media (max-width:1350px){
-
-    .pins{
-
-        column-count:4;
-
-    }
-
-}
-
-
-/* ==========================================================
-   NICE FOCUS STATES
-========================================================== */
-
-button:focus,
-input:focus{
-
-    outline:none;
-
-}
-/* =========================
    CUSTOM POPUP
-========================= */
+========================================================== */
 
 .popup-overlay{
-
     position:fixed;
-
     inset:0;
 
     background:rgba(0,0,0,.55);
@@ -1547,15 +581,12 @@ input:focus{
     display:flex;
 
     justify-content:center;
-
     align-items:center;
 
     z-index:999999;
-
 }
 
 .popup-window{
-
     width:420px;
 
     max-width:90vw;
@@ -1571,29 +602,23 @@ input:focus{
     box-shadow:0 20px 50px rgba(0,0,0,.25);
 
     animation:popup .25s ease;
-
 }
 
 .popup-window h2{
-
     font-size:28px;
 
     margin-bottom:18px;
-
 }
 
 .popup-window p{
-
     line-height:1.8;
 
     font-size:17px;
 
     color:#555;
-
 }
 
 .popup-window button{
-
     margin-top:30px;
 
     border:none;
@@ -1610,70 +635,386 @@ input:focus{
 
     font-size:15px;
 
-    font-family:'Plus Jakarta Sans',sans-serif;
+    font-family:"Plus Jakarta Sans",sans-serif;
 
     font-weight:700;
 
     transition:.25s;
-
 }
 
 .popup-window button:hover{
-
     background:#c7001d;
-
 }
 
 @keyframes popup{
-
     from{
-
         transform:scale(.9);
-
         opacity:0;
-
     }
 
     to{
-
         transform:scale(1);
-
         opacity:1;
+    }
+}
 
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f5f5f5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#cfcfcf;
+
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#aaaaaa;
+}
+
+
+/* ==========================================================
+   TEXT SELECTION
+========================================================== */
+
+::selection{
+    background:#e60023;
+    color:white;
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 
 }
 
+.homepage,
+.board-page{
+    animation:fadeUp .45s ease;
+}
 
-/* ---------- Dark Mode ---------- */
+@keyframes fadeImage{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+.pin img{
+    opacity:0;
+    animation:fadeImage .5s forwards;
+}
+
+
+/* ==========================================================
+   FINAL POLISH
+========================================================== */
+
+.pin img{
+    border-radius:20px;
+}
+
+.board-card img{
+    transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+.board-card:hover img{
+    transform:scale(1.02);
+}
+
+.card img{
+    transition:transform .35s ease;
+}
+
+.card img:hover{
+    transform:scale(1.01);
+}
+
+.pin.searchMatch{
+    outline:4px solid #e60023;
+    outline-offset:4px;
+}
+
+.nav-links button,
+.profile,
+.icons span{
+    user-select:none;
+}
+
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+.right{
+    overflow-y:auto;
+}
+
+.right::-webkit-scrollbar{
+    width:8px;
+}
+
+footer{
+    margin-top:60px;
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+body.dark{
+    background:#111111;
+    color:#f5f5f5;
+}
+
+body.dark .navbar{
+    background:#111111;
+    border-bottom:1px solid #2b2b2b;
+}
+
+body.dark .logo,
+body.dark .homepage h2,
+body.dark .board-header h1{
+    color:white;
+}
+
+body.dark .board-header p,
+body.dark .board-info p{
+    color:#bdbdbd;
+}
+
+body.dark .board-info h3{
+    color:white;
+}
+
+body.dark .search-area input{
+    background:#2a2a2a;
+    color:white;
+}
+
+body.dark .search-area input::placeholder{
+    color:#aaa;
+}
+
+body.dark .icons span{
+    color:white;
+}
+
+body.dark .icons span:hover{
+    background:#252525;
+}
+
+body.dark .profile{
+    background:#252525;
+    color:white;
+}
+
+body.dark .profile:hover{
+    background:#333333;
+}
+
+body.dark .nav-links button{
+    color:white;
+}
+
+body.dark .nav-links button:hover{
+    background:#252525;
+}
+
+body.dark .pin{
+    background:#1f1f1f;
+    box-shadow:none;
+}
+
+body.dark .pin.note{
+    background:#252525;
+}
+
+body.dark .pin.note h3{
+    color:white;
+}
+
+body.dark .pin.note p{
+    color:#dddddd;
+}
+
+body.dark .pin.screenshot img,
+body.dark .pin.drawing img{
+    background:#1a1a1a;
+}
+
+
+/* ===== IMAGE POPUP DARK MODE ===== */
+
+body.dark .popup-card,
+body.dark .card{
+    background:#252525 !important;
+    color:white !important;
+}
+
+body.dark .popup-card h2,
+body.dark .card h2{
+    color:white !important;
+}
+
+body.dark .popup-card p,
+body.dark .card p{
+    color:#dddddd !important;
+}
+
+body.dark .popup-card div,
+body.dark .card div{
+    color:#aaaaaa !important;
+}
+
+body.dark .popup-card img,
+body.dark .card img{
+    background:#181818;
+}
+
+
+/* ===== CUSTOM ALERT POPUPS ===== */
 
 body.dark .popup-window{
-
-    background:#202020;
-
+    background:#252525;
     color:white;
-
 }
 
 body.dark .popup-window p{
-
-    color:#ddd;
-
+    color:#dddddd;
 }
 
 body.dark .popup-window button{
-
     background:#bb1235;
-
 }
 
 body.dark .popup-window button:hover{
-
     background:#d31d43;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1400px){
+
+    .pins{
+        column-count:4;
+    }
+
+}
+
+@media (max-width:1100px){
+
+    .pins{
+        column-count:3;
+    }
+
+}
+
+@media (max-width:850px){
+
+    .pins{
+        column-count:2;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .pins{
+        column-count:1;
+    }
+
+    .popup-card,
+    .card{
+        flex-direction:column;
+        width:95vw;
+    }
+
+    .popup-card img,
+    .card img{
+        width:100%;
+        max-height:55vh;
+    }
+
+    .popup-info,
+    .right{
+        width:100%;
+    }
+
+}
+
+@media (min-width:1200px){
+
+    .homepage,
+    .board-page{
+        padding-left:60px;
+        padding-right:60px;
+    }
+
+}
+
+@media (min-width:1700px){
+
+    .pins{
+        column-count:6;
+    }
+
+}
+
+@media (max-width:1350px){
+
+    .pins{
+        column-count:4;
+    }
 
 }
 
 
 /* ==========================================================
-   END
+   NICE FOCUS STATES
 ========================================================== */
+
+button:focus,
+input:focus{
+    outline:none;
+}
+}
