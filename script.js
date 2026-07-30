@@ -619,6 +619,7 @@ function updatePopupTheme(){
     }
 
 }
+{
 
 updatePopupTheme();
 
