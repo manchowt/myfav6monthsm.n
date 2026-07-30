@@ -1,7 +1,7 @@
 // ======================================================
 // OUR PINTEREST ❤️
 // SCRIPT.JS
-// PART 1 - ELEMENTS, NAVIGATION & SEARCH
+// PART 1 - ELEMENTS, NAVIGATION, SEARCH & IMAGE POPUP
 // ======================================================
 
 
@@ -22,6 +22,8 @@ const messageButton = document.getElementById("messageButton");
 
 const searchBox = document.getElementById("searchBox");
 
+const darkModeButton = document.getElementById("darkModeButton");
+
 
 
 // ======================================================
@@ -36,10 +38,8 @@ boardLink.addEventListener("click", function (e) {
     boardPage.classList.remove("hidden");
 
     window.scrollTo({
-
         top: 0,
         behavior: "smooth"
-
     });
 
 });
@@ -57,17 +57,15 @@ homeButton.addEventListener("click", function () {
 
     searchBox.value = "";
 
-    document.querySelectorAll(".pin").forEach(function (pin) {
+    document.querySelectorAll(".pin").forEach(function(pin){
 
         pin.style.display = "block";
 
     });
 
     window.scrollTo({
-
         top: 0,
         behavior: "smooth"
-
     });
 
 });
@@ -78,66 +76,37 @@ homeButton.addEventListener("click", function () {
 // SEARCH
 // ======================================================
 
-searchBox.addEventListener("input", function () {
+searchBox.addEventListener("input", function(){
 
     const search = searchBox.value.toLowerCase().trim();
 
-    if (search !== "") {
+    if(search !== ""){
 
         homepage.classList.add("hidden");
         boardPage.classList.remove("hidden");
 
     }
 
-    const pins = document.querySelectorAll(".pin");
-
-    pins.forEach(function (pin) {
+    document.querySelectorAll(".pin").forEach(function(pin){
 
         const image = pin.querySelector("img");
 
+        if(!image){
 
+            const text = pin.innerText.toLowerCase();
+            const tags = (pin.dataset.tags || "").toLowerCase();
 
-        // ==========================
-        // LETTER CARDS
-        // ==========================
-
-        if (!image) {
-
-            const text =
-                pin.innerText.toLowerCase();
-
-            const tags =
-                (pin.dataset.tags || "").toLowerCase();
-
-            if (
-
+            pin.style.display = (
                 search === "" ||
-
                 text.includes(search) ||
-
                 tags.includes(search)
-
-            ) {
-
-                pin.style.display = "block";
-
-            }
-
-            else {
-
-                pin.style.display = "none";
-
-            }
+            )
+            ? "block"
+            : "none";
 
             return;
 
         }
-
-
-
-        // ==========================
-        // IMAGE PINS
-        // ==========================
 
         const caption =
             (image.dataset.caption || "").toLowerCase();
@@ -145,25 +114,13 @@ searchBox.addEventListener("input", function () {
         const tags =
             (image.dataset.tags || "").toLowerCase();
 
-        if (
-
+        pin.style.display = (
             search === "" ||
-
             caption.includes(search) ||
-
             tags.includes(search)
-
-        ) {
-
-            pin.style.display = "block";
-
-        }
-
-        else {
-
-            pin.style.display = "none";
-
-        }
+        )
+        ? "block"
+        : "none";
 
     });
 
@@ -175,13 +132,13 @@ searchBox.addEventListener("input", function () {
 // ESC CLEARS SEARCH
 // ======================================================
 
-searchBox.addEventListener("keydown", function (e) {
+searchBox.addEventListener("keydown", function(e){
 
-    if (e.key === "Escape") {
+    if(e.key === "Escape"){
 
         searchBox.value = "";
 
-        document.querySelectorAll(".pin").forEach(function (pin) {
+        document.querySelectorAll(".pin").forEach(function(pin){
 
             pin.style.display = "block";
 
@@ -190,14 +147,11 @@ searchBox.addEventListener("keydown", function (e) {
     }
 
 });
-// ======================================================
-// PART 2 - PINTEREST IMAGE POPUP
-// ======================================================
 
 
 
 // ======================================================
-// CREATE OVERLAY
+// IMAGE POPUP OVERLAY
 // ======================================================
 
 const overlay = document.createElement("div");
@@ -230,13 +184,9 @@ popup.style.width = "950px";
 popup.style.maxWidth = "92vw";
 popup.style.height = "88vh";
 
-popup.style.background = document.body.classList.contains("dark")
-    ? "#262626"
-    : "white";
 popup.style.borderRadius = "24px";
 
 popup.style.display = "flex";
-
 popup.style.overflow = "hidden";
 
 overlay.appendChild(popup);
@@ -265,7 +215,6 @@ popup.appendChild(popupImage);
 const rightPanel = document.createElement("div");
 
 rightPanel.style.width = "40%";
-
 rightPanel.style.padding = "35px";
 
 rightPanel.style.display = "flex";
@@ -281,7 +230,8 @@ popup.appendChild(rightPanel);
 
 const popupTitle = document.createElement("h2");
 
-popupTitle.innerHTML = "❤️ my favourite person😁😝😽";
+popupTitle.innerHTML =
+"❤️ my favourite person😁😝😽";
 
 popupTitle.style.marginBottom = "18px";
 
@@ -298,8 +248,6 @@ const popupCaption = document.createElement("p");
 popupCaption.style.fontSize = "18px";
 popupCaption.style.lineHeight = "1.8";
 
-popupCaption.style.color = "#444";
-
 popupCaption.style.flex = "1";
 
 rightPanel.appendChild(popupCaption);
@@ -315,7 +263,6 @@ const popupFooter = document.createElement("div");
 popupFooter.innerHTML =
 "📌 Saved to <b>my favourite person😁😝😽</b>";
 
-popupFooter.style.color = "#777";
 popupFooter.style.marginTop = "25px";
 
 rightPanel.appendChild(popupFooter);
@@ -328,12 +275,42 @@ rightPanel.appendChild(popupFooter);
 
 document.querySelectorAll(".pin img").forEach(function(image){
 
-    image.addEventListener("click",function(){
+    image.addEventListener("click", function(){
 
         popupImage.src = image.src;
 
         popupCaption.innerHTML =
             image.dataset.caption || "";
+
+
+
+        // ==================================
+        // DARK / LIGHT POPUP COLORS
+        // ==================================
+
+        if(document.body.classList.contains("dark")){
+
+            popup.style.background = "#252525";
+
+            popupTitle.style.color = "#ffffff";
+
+            popupCaption.style.color = "#dddddd";
+
+            popupFooter.style.color = "#aaaaaa";
+
+        }
+
+        else{
+
+            popup.style.background = "#ffffff";
+
+            popupTitle.style.color = "#111111";
+
+            popupCaption.style.color = "#444444";
+
+            popupFooter.style.color = "#777777";
+
+        }
 
 
 
@@ -344,35 +321,24 @@ document.querySelectorAll(".pin img").forEach(function(image){
         if(
 
             image.src.includes("ilu") ||
-
             image.src.includes("lugn") ||
-
             image.src.includes("bemyg") ||
-
             image.src.includes("platonic") ||
-
             image.src.includes("1stpic2gether") ||
-
             image.src.includes("hypedbemyg")
 
         ){
 
             popupImage.style.objectFit = "contain";
 
-           popupImage.style.background =
-document.body.classList.contains("dark")
-? "#1a1a1a"
-: "#f6f6f6";
+            popupImage.style.background =
+                document.body.classList.contains("dark")
+                ? "#1a1a1a"
+                : "#f6f6f6";
 
             popupImage.style.padding = "20px";
 
         }
-
-
-
-        // ==================================
-        // EVERYTHING ELSE
-        // ==================================
 
         else{
 
@@ -383,27 +349,7 @@ document.body.classList.contains("dark")
             popupImage.style.padding = "0";
 
         }
-if(document.body.classList.contains("dark")){
 
-    popup.style.background = "#262626";
-
-    popupTitle.style.color = "white";
-
-    popupCaption.style.color = "#ddd";
-
-    popupFooter.style.color = "#aaa";
-
-}else{
-
-    popup.style.background = "white";
-
-    popupTitle.style.color = "#111";
-
-    popupCaption.style.color = "#444";
-
-    popupFooter.style.color = "#777";
-
-}
         overlay.style.display = "flex";
 
     });
@@ -416,88 +362,37 @@ if(document.body.classList.contains("dark")){
 // CLOSE POPUP
 // ======================================================
 
-overlay.addEventListener("click",function(e){
+overlay.addEventListener("click", function(e){
 
-    if(e.target===overlay){
+    if(e.target === overlay){
 
-        overlay.style.display="none";
-
-    }
-
-});
-
-
-
-document.addEventListener("keydown",function(e){
-
-    if(e.key==="Escape"){
-
-        overlay.style.display="none";
+        overlay.style.display = "none";
 
     }
 
 });
-// ======================================================
-// PART 3 - BUTTONS & FINAL FEATURES
-// ======================================================
 
 
 
-// ======================================================
-// NOTIFICATION
-// ======================================================
+document.addEventListener("keydown", function(e){
 
-notificationButton.addEventListener("click", function () {
+    if(e.key === "Escape"){
 
-    alert(
-`❤️ 1 New Notification
+        overlay.style.display = "none";
 
-its been six monthsss.
-its been longer`
-    );
+    }
 
-});
-
-
-
-// ======================================================
-// MESSAGE
-// ======================================================
-
-messageButton.addEventListener("click", function () {
-
-    alert(
-`💬 From jaanu
-
-thank you for the happiest six months of my life.
-i lovee youu :)`
-    );
-
-});
-
-
-
-// ======================================================
-// EXPLORE
-// ======================================================
-
-exploreButton.addEventListener("click", function () {
-
-    alert("hopefully, we explore much much more");
-
-});
-
-
-
-// ======================================================
+    // ======================================================
 // SEARCH SHORTCUTS
-// ======================================================
-
-searchBox.addEventListener("keydown", function(e){
+// ======================================================searchBox.addEventListener("keydown", function(e){
 
     if(e.key !== "Enter") return;
 
     const value = searchBox.value.toLowerCase().trim();
+
+    // ==========================
+    // PHOTOS ONLY
+    // ==========================
 
     if(value === "photos"){
 
@@ -519,6 +414,10 @@ searchBox.addEventListener("keydown", function(e){
 
     }
 
+    // ==========================
+    // NOTES ONLY
+    // ==========================
+
     if(value === "letters" || value === "note"){
 
         searchBox.value = "";
@@ -538,6 +437,10 @@ searchBox.addEventListener("keydown", function(e){
         });
 
     }
+
+    // ==========================
+    // SCREENSHOTS ONLY
+    // ==========================
 
     if(value === "screenshots" || value === "texts" || value === "chat"){
 
@@ -611,7 +514,7 @@ Press OK to open your letter ❤️`
 
                 window.location.href = "letter.html";
 
-            },500);
+            }, 500);
 
         }
 
@@ -620,24 +523,36 @@ Press OK to open your letter ❤️`
 });
 
 
+
 // ======================================================
-// DOUBLE CLICK HOME LOGO
+// DOUBLE CLICK LOGO
 // ======================================================
 
-document.querySelector(".logo").addEventListener("dblclick", function(){
+const logo = document.querySelector(".logo");
 
-    homepage.classList.remove("hidden");
-    boardPage.classList.add("hidden");
+if(logo){
 
-    searchBox.value = "";
+    logo.addEventListener("dblclick", function(){
 
-    document.querySelectorAll(".pin").forEach(function(pin){
+        homepage.classList.remove("hidden");
+        boardPage.classList.add("hidden");
 
-        pin.style.display = "block";
+        searchBox.value = "";
+
+        document.querySelectorAll(".pin").forEach(function(pin){
+
+            pin.style.display = "block";
+
+        });
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
     });
 
-});
+}
 
 
 
@@ -649,9 +564,12 @@ console.log(
 "%cMade with ❤️ for our six months.",
 "font-size:18px;color:#e60023;font-weight:bold;"
 );
-// ======================================
+
+
+
+// ======================================================
 // DARK MODE
-// ======================================
+// ======================================================
 
 const darkModeButton = document.getElementById("darkModeButton");
 
@@ -663,11 +581,48 @@ darkModeButton.addEventListener("click", function(){
 
         darkModeButton.innerHTML = "☀️";
 
-    }
-
-    else{
+    }else{
 
         darkModeButton.innerHTML = "🌙";
 
     }
+
+});
+
+
+
+// ======================================================
+// DARK MODE STYLING FOR IMAGE POPUP
+// ======================================================
+
+function updatePopupTheme(){
+
+    if(document.body.classList.contains("dark")){
+
+        popup.style.background = "#252525";
+
+        popupTitle.style.color = "#ffffff";
+
+        popupCaption.style.color = "#dddddd";
+
+        popupFooter.style.color = "#aaaaaa";
+
+    }else{
+
+        popup.style.background = "#ffffff";
+
+        popupTitle.style.color = "#111111";
+
+        popupCaption.style.color = "#444444";
+
+        popupFooter.style.color = "#777777";
+
+    }
+
+}
+
+updatePopupTheme();
+
+darkModeButton.addEventListener("click", updatePopupTheme);
+
 });
