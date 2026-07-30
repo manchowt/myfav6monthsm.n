@@ -626,3 +626,4 @@ updatePopupTheme();
 darkModeButton.addEventListener("click", updatePopupTheme);
 
 });
+document.body.classList.add("dark");
