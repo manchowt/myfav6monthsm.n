@@ -597,15 +597,13 @@ document.querySelectorAll(".pin.note").forEach(function(note){
 
     note.addEventListener("click", function(){
 
-       if(!note.querySelector("h3")?.textContent.includes("Open")) return;
+
         const open = confirm(
-`❤️ Before you continue...
+`Before you continue...
 
-This is the very last thing.
+Make sure you've looked through every pin first. yes it is a threat.
 
-Make sure you've looked through every pin first.
-
-Press OK to open your letter ❤️`
+Press OK to open your letter ;)`
         );
 
         if(open){
