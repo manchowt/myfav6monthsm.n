@@ -597,8 +597,7 @@ document.querySelectorAll(".pin.note").forEach(function(note){
 
     note.addEventListener("click", function(){
 
-        if(!note.innerText.includes("Open Last")) return;
-
+       if(!note.querySelector("h3")?.textContent.includes("Open")) return;
         const open = confirm(
 `❤️ Before you continue...
 
