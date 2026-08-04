@@ -459,7 +459,9 @@ notificationButton.addEventListener("click", function () {
 `❤️ 1 New Notification
 
 its been six monthsss.
-its been longer`
+but its also been longer
+so mwah anyways`
+    
     );
 
 });
